@@ -6,6 +6,12 @@ Changes -*- org -*-
 :  \____|_| |_|\__,_|_| |_|\__, |\___| |_____\___/ \__, |
 :                          |___/                   |___/ 
 
+* Release 0.22 [2016-05-18 Wed]
+
+Fixes for AUR4, adding git info, fixed the scraper to update the 
+fields to the AUR4 packages page and updated a few tests to reflect
+AUR4 related changes.
+
 * Release 0.19 [2014-01-04 Sun]
 
 Fixes the 01-info.t test. The ``clyde-git'' package was removed
