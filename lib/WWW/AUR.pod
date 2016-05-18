@@ -232,7 +232,7 @@ Defaults to C<$basepath/cache>.
 
 =over 4
 
-=item * L<http://github.com/juster/perl-www-aur>
+=item * L<http://github.com/jnbek/perl-www-aur>
 
 =item * L<http://aur.archlinux.org>
 
@@ -242,7 +242,18 @@ Defaults to C<$basepath/cache>.
 
 =head1 AUTHOR
 
+John D Jones III, C<< <jnbek at cpan dot org> >>
+
+=head1 SPECIAL THANKS
+
 Justin Davis, C<< <juster at cpan dot org> >>
+
+Mr Davis created and maintained this awesome module for many years.
+After the AUR4 migration, he became unable to devote the time needed
+to maintain this module any longer and blessed me with taking over this module's
+maintainership. Thanks Justin for doing all the real work on this module and
+making it so all I needed to do was update a few lines of code here and there
+and update a couple of tests.
 
 =head1 BUGS
 
@@ -254,7 +265,9 @@ Send me an email if you have any questions or need help.
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2014 Justin Davis.
+Copyright 2014-2015 Justin Davis.
+
+Copyright 2015-2016 John D Jones III
 
 This program is free software; you can redistribute it and/or modify it
 under the terms of either: the GNU General Public License as published

@@ -112,7 +112,7 @@ sub next
     my @pkginfo = splice @{ $self->{'packages'} }, 0, 6;
     if ( @pkginfo ) {
         my $pkg;
-        my @k = qw/cat name version votes desc/;
+        my @k = qw/name version votes popularity desc/;
         for my $i (0 .. $#k) {
             $pkg->{$k[$i]} = $pkginfo[$i];
         }

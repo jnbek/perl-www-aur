@@ -17,26 +17,26 @@ our $Scheme      = 'https';
 sub _pkgdir
 {
     my ($pkgname) = @_;
-    my $pre = substr $pkgname, 0, 2;
-    return "packages/$pre/$pkgname";
+    return "cgit/aur.git";
 }
 
 sub pkgfile_uri
 {
     my ($pkgname) = @_;
     my $dir = _pkgdir($pkgname);
-    return "$Scheme://$WWW::AUR::HOST/cgit/aur.git/snapshot/$pkgname.tar.gz";
+    return "$Scheme://$WWW::AUR::HOST/$dir/snapshot/$pkgname.tar.gz";
 }
 
 sub pkgbuild_uri
 {
     my ($pkgname) = @_;
     my $dir = _pkgdir($pkgname);
-    return "$Scheme://$WWW::AUR::HOST/$dir/PKGBUILD"
+    return "$Scheme://$WWW::AUR::HOST/$dir/plain/PKGBUILD?h=$pkgname"
 }
 
 sub pkgsubmit_uri
 {
+    return;
 	return "$Scheme://$WWW::AUR::HOST/submit/";
 }
 

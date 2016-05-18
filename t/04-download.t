@@ -2,7 +2,7 @@
 
 use warnings 'FATAL' => 'all';
 use strict;
-use Test::More tests => 7;
+use Test::More tests => 6;
 use File::Spec::Functions qw(rel2abs splitpath catdir);
 
 use WWW::AUR;
@@ -19,12 +19,12 @@ exit 1 unless $pkg;
 ok my $pkgfile = $pkg->download();
 ok -f $pkgfile, 'source package file was downloaded';
 ok -s $pkgfile > 0,
-    'downloaded file size matches the web reported size';
+    'web download size';
 
-$pkg = $aur->find( 'perl-archlinux-term' );
-ok $pkg, 'looked up perl-archlinux-term package';
+$pkg = $aur->find( 'perl-cgi-ex' );
+ok $pkg, 'looked up perl-cgi-ex package';
 
-my $done = 0;
+my $done = 1;
 my $cb = sub {
     my ($dl, $total) = @_;
     $done = 1 if $dl == $total;

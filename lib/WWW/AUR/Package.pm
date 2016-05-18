@@ -87,10 +87,11 @@ sub _download_url
 sub download_size
 {
     my ($self) = @_;
-
+    Carp::cluck("Subroutine download_size does not work due to nginx not returning content-length");
+    return 0;
+    # TODO: Fix or remove this
     my $ua   = _useragent();
     my $resp = $ua->head( $self->_download_url() );
-    
     return undef unless $resp->is_success;
     return $resp->header( 'content-length' );
 }

@@ -5,14 +5,14 @@ use strict;
 use Test::More;
 use WWW::AUR::URI qw(:all);
 
-my $pkgs = "https://aur.archlinux.org/packages";
-is pkgfile_uri('f'), "$pkgs/f/f/f.tar.gz";
-is pkgfile_uri('fo'), "$pkgs/fo/fo/fo.tar.gz";
-is pkgfile_uri('foo'), "$pkgs/fo/foo/foo.tar.gz";
+my $pkgs = "https://aur.archlinux.org/cgit/aur.git";
+is pkgfile_uri('f'), "$pkgs/snapshot/f.tar.gz";
+is pkgfile_uri('fo'), "$pkgs/snapshot/fo.tar.gz";
+is pkgfile_uri('foo'), "$pkgs/snapshot/foo.tar.gz";
 
-is pkgbuild_uri('bar'), "$pkgs/ba/bar/PKGBUILD";
-is pkgbuild_uri('ba'), "$pkgs/ba/ba/PKGBUILD";
-is pkgbuild_uri('b'), "$pkgs/b/b/PKGBUILD";
+is pkgbuild_uri('bar'), "$pkgs/plain/PKGBUILD?h=bar";
+is pkgbuild_uri('ba'), "$pkgs/plain/PKGBUILD?h=ba";
+is pkgbuild_uri('b'), "$pkgs/plain/PKGBUILD?h=b";
 
 my $rpc = "https://aur.archlinux.org/rpc";
 my $arg = "arg%5B%5D";
@@ -28,7 +28,7 @@ $WWW::AUR::URI::Scheme = 'http';
 s/^https/http/ for $rpc, $pkgs;
 
 is rpc_uri('search', 'foo'), "$rpc?type=search&arg=foo";
-is pkgfile_uri('foo'), "$pkgs/fo/foo/foo.tar.gz";
-is pkgbuild_uri('bar'), "$pkgs/ba/bar/PKGBUILD";
+is pkgfile_uri('foo'), "$pkgs/snapshot/foo.tar.gz";
+is pkgbuild_uri('bar'), "$pkgs/plain/PKGBUILD?h=bar";
 
 done_testing;
