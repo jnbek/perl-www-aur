@@ -104,7 +104,7 @@ if the AUR website is down...
 
 ** Source code repository
 
-http://github.com/juster/perl-www-aur
+http://github.com/jnbek/perl-www-aur
 
 ** ArchLinux User Repository   
 
@@ -116,7 +116,7 @@ http://www.archlinux.org/pacman/makepkg.8.html
 
 * Author
 
-Justin Davis <juster at cpan dot org>
+John D Jones III <jnbek at cpan dot org>
 
 * Support
 
@@ -125,7 +125,7 @@ run into any bugs please e-mail any information about them.
 
 * License and Copyright
 
-Copyright 2014 Justin Davis.
+Copyright 2016 John D Jones IIII
 
 This program is free software; you can redistribute it and/or modify it
 under the terms of either: the GNU General Public License as published
